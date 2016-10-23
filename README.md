@@ -3,8 +3,9 @@ Project là nơi lưu trữ phông Tahoma.WOFF tạm thời cho dự án `Vietna
 
 Phông Tahoma.WOFF mới chỉ được Zì cung cấp ở dạng Regular, các ký tự ở dạng Thin, Bold, Oblique, Italic sẽ hiển thị không được đẹp mắt cho lắm, dù vẫn theo quy chuẩn.
 
-Hiện tại Zì và bù đụi, rất tiếc không biết cách mở `GET` access, các font từ `http://asinerum-gae.appspot.com/` khi sử dụng cho mã Javascript sẽ đều báo lỗi `Access-Control-Allow-Origin (CORS origin)` trong `Console` của trình duyệt.
-Vậy nên chi bộ hãy cứ lấy font từ GitHub này nhóe.
+Hiện tại Zì và bù đụi, rất tiếc không biết cách mở `GET` access, link các font từ `http://asinerum-gae.appspot.com/` khi sử dụng cho mã Javascript sẽ đều báo lỗi `Access-Control-Allow-Origin (CORS origin)` trong `Console` của trình duyệt.
+Một số trang ngoan cố cũng chặn link từ GitHub do một số lý do bí hiểm vẫn chưa tìm ra.
+Nói chung chi bộ hãy cứ lấy tạm link phông từ GitHub này đã.
 
 ##### Mã CSS gốc
 ```css
@@ -24,7 +25,7 @@ Vậy nên chi bộ hãy cứ lấy font từ GitHub này nhóe.
 ##### Mã Javascript gốc
 ```javascript
 var fontLink = prompt("Nhập link phông (WOFF) mới.\nCancel để chọn mặc định từ GitHub.", "xxx");
-if (fontLink === "") {
+if (fontLink === "" || fontLink.isNaN) {
     fontLink = "xxx";
 }
 var css = "@font-face {font-family: \"Tahoma di Asino\";src: url(\"" + fontLink + "\") format(\"woff\");}* {font-family: Tahoma di Asino !important;}",
@@ -44,7 +45,7 @@ Hiện tại có 2 cách.
 ### 1. Bookmarklet (không tự động)
 Sử dụng đoạn mã sau (copy):
 ```javascript
-javascript:var fontLink=prompt("Nhập link phông (WOFF) mới.\nCancel để chọn mặc định từ GitHub.","https://raw.githubusercontent.com/AsOrticami/TahomaDiAsino/master/fonts/Tahoma.woff");if(fontLink==""){fontLink="https://raw.githubusercontent.com/AsOrticami/TahomaDiAsino/master/fonts/Tahoma.woff";}
+javascript:var fontLink=prompt("Nhập link phông (WOFF) mới.\nCancel để chọn mặc định từ GitHub.","https://raw.githubusercontent.com/AsOrticami/TahomaDiAsino/master/fonts/Tahoma.woff");if(fontLink==""||fontLink.isNaN){fontLink="https://raw.githubusercontent.com/AsOrticami/TahomaDiAsino/master/fonts/Tahoma.woff";}
 var css="@font-face {font-family: \"Tahoma di Asino\";src: url(\""+fontLink+"\") format(\"woff\");}* {font-family: Tahoma di Asino !important;}",head=document.head||document.getElementsByTagName("head")[0],style=document.createElement("style");style.type='text/css';if(style.styleSheet){style.styleSheet.cssText=css;}else{style.appendChild(document.createTextNode(css));}
 head.appendChild(style);
 ```
