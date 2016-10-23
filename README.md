@@ -87,7 +87,7 @@ Thay thế bằng đoạn mã ở trên, sau đó lưu lại (icon Save). Tiếp
 
 ![alt tag](https://c7.staticflickr.com/6/5751/30210777150_24c87889e4_b.jpg)
 
-Chi bộ lưu ý, phần `// @include http://*/*` giúp cài đặt website sẽ được áp dụng, ở đây là toàn bộ các trang http.
+Chi bộ lưu ý, đoạn mã `// @include http://*/*` hoặc `//@match  http://*/*` giúp cài đặt các website sẽ được áp dụng, ở đây là toàn bộ các trang http.
 
 Nếu chỉ muốn sử dụng tại Faceboook, hãy chuyển sang `// @include https://facebook.com/*` và xóa các dòng `@include` còn lại.
 
