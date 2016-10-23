@@ -25,7 +25,7 @@ Nói chung chi bộ hãy cứ lấy tạm link phông từ GitHub này đã.
 ##### Mã Javascript gốc
 ```javascript
 var fontLink = prompt("Nhập link phông (WOFF) mới.\nCancel để chọn mặc định từ GitHub.", "xxx");
-if (fontLink === "" || fontLink.isNaN) {
+if (fontLink === "" || fontLink==null) {
     fontLink = "xxx";
 }
 var css = "@font-face {font-family: \"Tahoma di Asino\";src: url(\"" + fontLink + "\") format(\"woff\");}* {font-family: Tahoma di Asino !important;}",
@@ -45,7 +45,7 @@ Hiện tại có 2 cách.
 ### 1. Bookmarklet (không tự động)
 Sử dụng đoạn mã sau (copy):
 ```javascript
-javascript:var fontLink=prompt("Nhập link phông (WOFF) mới.\nCancel để chọn mặc định từ GitHub.","https://raw.githubusercontent.com/AsOrticami/TahomaDiAsino/master/fonts/Tahoma.woff");if(fontLink==""||fontLink.isNaN){fontLink="https://raw.githubusercontent.com/AsOrticami/TahomaDiAsino/master/fonts/Tahoma.woff";}
+javascript:var fontLink=prompt("Nhập link phông (WOFF) mới.\nCancel để chọn mặc định từ GitHub.","https://raw.githubusercontent.com/AsOrticami/TahomaDiAsino/master/fonts/Tahoma.woff");if(fontLink==""||fontLink==null){fontLink="https://raw.githubusercontent.com/AsOrticami/TahomaDiAsino/master/fonts/Tahoma.woff";}
 var css="@font-face {font-family: \"Tahoma di Asino\";src: url(\""+fontLink+"\") format(\"woff\");}* {font-family: Tahoma di Asino !important;}",head=document.head||document.getElementsByTagName("head")[0],style=document.createElement("style");style.type='text/css';if(style.styleSheet){style.styleSheet.cssText=css;}else{style.appendChild(document.createTextNode(css));}
 head.appendChild(style);
 ```
