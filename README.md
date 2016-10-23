@@ -1,9 +1,10 @@
 # Tahoma di Asino
-Project là nơi lưu trữ phông Tahoma.WOFF tạm thời cho dự án `Vietnamese writing problems: Chữ giùn cảitạo` của `An Hoàng Trung Tướng`, aka. `Zì Zùn`. Đồng thời cũng hướng dẫn (ở dưới) cách dùng mã Javascript để hiển thị phông này cho các trang web ngoài Quán Bựa, trên các trình duyệt nhân Chromium (Chrome, Opera, Cốc cốc,...) và Mozilla (Firefox...).
+Project là nơi lưu trữ phông Tahoma.WOFF tạm thời cho dự án `Vietnamese writing problems: Chữ giùn cảitạo` của `An Hoàng Trung Tướng`, aka. `Zì Zùn`. Đồng thời cũng hướng dẫn (ở dưới) cách dùng mã Javascript để hiển thị phông này cho các trang web ngoài Quán Bựa, trên các trình duyệt nhân Chromium (Chrome, Opera, Cốc cốc,...) và Mozilla (Firefox,...).
 
-Phông Tahoma.WOFF Zì mới chỉ cung cấp ở dạng Regular, vậy nên các ký tự ở dạng Bold và Italic sẽ hiển thị không được đẹp mắt cho lắm, dù vẫn theo quy chuẩn.
+Phông Tahoma.WOFF mới chỉ được Zì cung cấp ở dạng Regular, các ký tự ở dạng Thin, Bold, Oblique, Italic sẽ hiển thị không được đẹp mắt cho lắm, dù vẫn theo quy chuẩn.
 
-Hiện tại Zì và bù đụi, rất tiếc không biết cách mở `GET` access, cho nên các font từ `http://asinerum-gae.appspot.com/`, khi sử dụng mã Javascript sẽ đều báo lỗi `Access-Control-Allow-Origin (CORS origin)` trong `Console` của trình duyệt. Vậy nên chi bộ hãy cứ lấy font từ GitHub này tạm nhóe.
+Hiện tại Zì và bù đụi, rất tiếc không biết cách mở `GET` access, các font từ `http://asinerum-gae.appspot.com/` khi sử dụng cho mã Javascript sẽ đều báo lỗi `Access-Control-Allow-Origin (CORS origin)` trong `Console` của trình duyệt.
+Vậy nên chi bộ hãy cứ lấy font từ GitHub này nhóe.
 
 ##### Mã CSS gốc
 ```css
