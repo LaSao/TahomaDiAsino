@@ -1,5 +1,10 @@
 # Tahoma di Asino
-Lưu trữ phông Tahoma tạm thời cho dự án `Vietnamese writing problems: Chữ giùn cảitạo` của `Zì Zùn` aka. `An Hoàng Trung Tướng`
+Project là nơi lưu trữ phông Tahoma.WOFF tạm thời cho dự án `Vietnamese writing problems: Chữ giùn cảitạo` của `An Hoàng Trung Tướng`, aka. `Zì Zùn`. Đồng thời cũng hướng dẫn (ở dưới) cách dùng mã Javascript để hiển thị phông này cho các trang web ngoài Quán Bựa, trên các trình duyệt nhân Chromium (Chrome, Opera, Cốc cốc,...) và Mozilla (Firefox...).
+
+Phông Tahoma.WOFF Zì mới chỉ cung cấp ở dạng Regular, vậy nên các ký tự ở dạng Bold và Italic sẽ hiển thị không được đẹp mắt cho lắm, dù vẫn theo quy chuẩn.
+
+Hiện tại Zì và bù đụi, rất tiếc không biết cách mở `GET` access, cho nên các font từ `http://asinerum-gae.appspot.com/`, khi sử dụng mã Javascript sẽ đều báo lỗi `Access-Control-Allow-Origin (CORS origin)` trong `Console` của trình duyệt. Vậy nên chi bộ hãy cứ lấy font từ GitHub này tạm nhóe.
+
 ##### Mã CSS gốc
 ```css
 @font-face {
@@ -53,7 +58,8 @@ Mở một lá cải Giùn bất kỳ. Nhấn vào `Bookmarklet` vừa tạo và
 ![alt tag](https://c7.staticflickr.com/6/5738/29877876094_f021eac6c2_b.jpg)
 ### 2. Tampermonkey (tự động)
 [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) hiện chỉ sử dụng được trên Chrome, add-on tương tự trên Firefox có tên [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/).
-Mời cài đặt
+
+Mời cài đặt.
 
 Sử dụng đoạn mã sau (copy):
 ```javascript
@@ -89,7 +95,7 @@ Thay thế bằng đoạn mã ở trên, sau đó lưu lại (icon Save). Tiếp
 
 Chi bộ lưu ý, đoạn mã `// @include http://*/*` hoặc `//@match  http://*/*` giúp cài đặt các website sẽ được áp dụng, ở đây là toàn bộ các trang http.
 
-Nếu chỉ muốn sử dụng tại Faceboook, hãy chuyển sang `// @include https://facebook.com/*` và xóa các dòng `@include` còn lại.
+Nếu chỉ muốn sử dụng tại Faceboook, hãy chuyển sang `// @include https://facebook.com/*` và xóa các dòng `@include` - `@match` còn lại.
 
 ##Quán Bựa - An Hoàng Trung Tướng
  
